@@ -30,5 +30,31 @@ Congratulations, you have made your first post!
 
 Feel free to play around and edit this post as much you like.
 ```
+```
+{
+    "data": {
+        "campus_id": 1,
+        "name": "Telkom University",
+        "address": "Jl. Telekomunikasi Terusan Buah Batu Indonesia 40257, Bandung, Indonesia",
+        "provinces": [
+            {
+                "province_id": 12,
+                "name": "Jawa Barat"
+            }
+        ]
+    }
+}
+```
+
+
+**Get Detail ID**
+
+```bash
+http://localhost:8080/api/campus/1
+````
+
+and `json` result is
+ 
+
 
 A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).

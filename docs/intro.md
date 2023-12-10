@@ -2,46 +2,127 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Indonesia University API
 
-Let's discover **Docusaurus in less than 5 minutes**.
+<!-- Let's discover **Docusaurus in less than 5 minutes**. -->
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Indonesia University API is build to show All List Indonesia University you can contribute using `.csv` files to updated all data in [here](https://github.com/senapahlevi/doc-indonesia-university-API)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Installation
 
-### What you'll need
+- [Golang](https://nodejs.org/en/download/) using versino 1.8 and using framework :
+  - [Gorm](https://nodejs.org/en/download/) version 18.0 or above:
+  - [Gin](https://nodejs.org/en/download/) version 18.0 or above:
+- [MySQL](https://nodejs.org/en/download/) version 18.0 or above:
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Updated by **2024**.
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+Clone to your project Golang
 
 ```bash
-npm init docusaurus@latest my-website classic
+git clone https://github.com/senapahlevi/doc-indonesia-university-API
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+setting `.env`
+connect database
 
 ```bash
-cd my-website
-npm run start
+DB_USERNAME=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+DB_NAME=
+PORT=
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+download all library and framework golang to your local
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```bash
+go get -u
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+running golang project from terminal
+
+```bash
+go run main.go
+```
+
+as you can see project from `main.go` is execute
+
+The `go run main.go` command run your project locally and serves ready for you to view at your port example if youre using `PORT=8080` you will running using `http://localhost:8080/`
+
+## API
+
+**Get**
+
+```bash
+http://localhost:8080/api/campus?CampusName=Telkom
+```
+
+```
+{
+      "data": [
+          {
+              "campus_id": 1,
+              "name": "Telkom University",
+              "address": "Jl. Telekomunikasi Terusan Buah Batu Indonesia 40257, Bandung, Indonesia",
+              "provinces": [
+                  {
+                      "province_id": 12,
+                      "name": "Jawa Barat"
+                  }
+              ]
+          },
+          {
+              "campus_id": 2,
+              "name": "Telkom University",
+              "address": "Jalan Halimun Raya No.2, RT.15/RW.6, Guntur, Kecamatan Setiabudi, Kota Jakarta Selatan, DKI Jakarta 12980",
+              "provinces": [
+                  {
+                      "province_id": 11,
+                      "name": "DKI Jakarta"
+                  }
+              ]
+          },
+          {
+              "campus_id": 3,
+              "name": "Telkom University",
+              "address": "Jalan Raya Daan Mogot KM.11, RT.1/RW.4, Kedaung Kali Angke, Cengkareng, Kota Jakarta Barat, DKI Jakarta 11710",
+              "provinces": [
+                  {
+                      "province_id": 11,
+                      "name": "DKI Jakarta"
+                  }
+              ]
+          }
+      ]
+  }
+``` 
+
+
+
+**Get Detail ID**
+
+```bash
+http://localhost:8080/api/campus/1
+```
+
+and `json` result is
+
+```
+{
+    "data": {
+        "campus_id": 1,
+        "name": "Telkom University",
+        "address": "Jl. Telekomunikasi Terusan Buah Batu Indonesia 40257, Bandung, Indonesia",
+        "provinces": [
+            {
+                "province_id": 12,
+                "name": "Jawa Barat"
+            }
+        ]
+    }
+}
+```
