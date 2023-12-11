@@ -12,10 +12,10 @@ Indonesia University API is build to show All List Indonesia University you can 
 
 ## Installation
 
-- [Golang](https://go.dev/) using versino 1.8 and using framework :
-  - [Gorm](https://gorm.io/)
-  - [Gin](https://gin-gonic.com/)
-  - [MySQL](https://www.mysql.com/)
+- [Golang](https://nodejs.org/en/download/) using versino 1.8 and using framework :
+  - [Gorm](https://nodejs.org/en/download/) version 18.0 or above:
+  - [Gin](https://nodejs.org/en/download/) version 18.0 or above:
+- [MySQL](https://nodejs.org/en/download/) version 18.0 or above:
 
 Updated by **2024**.
 
@@ -99,7 +99,9 @@ http://localhost:8080/api/campus?CampusName=Telkom
           }
       ]
   }
-```
+``` 
+
+
 
 **Get Detail ID**
 
