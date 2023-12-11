@@ -30,21 +30,7 @@ Congratulations, you have made your first post!
 
 Feel free to play around and edit this post as much you like.
 ```
-```
-{
-    "data": {
-        "campus_id": 1,
-        "name": "Telkom University",
-        "address": "Jl. Telekomunikasi Terusan Buah Batu Indonesia 40257, Bandung, Indonesia",
-        "provinces": [
-            {
-                "province_id": 12,
-                "name": "Jawa Barat"
-            }
-        ]
-    }
-}
-```
+
 
 
 **Get Detail ID**
